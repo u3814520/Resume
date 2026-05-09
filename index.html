@@ -220,7 +220,7 @@ body {
       <div class="section">
         <div class="sec-title">專業摘要</div>
         <div class="summary">
-          具備<b>資料工程與行銷數據應用</b>經驗，專長 SQL、ETL 與資料流程設計，熟悉 Campaign 系統維運，資料管道串接至 BI 工具供業務查閱。曾主導開發<b>「數據快查系統」</b>與<b>「AI 名單優化系統」</b>，後者獲公司「平台化思維」<b>競賽第一名</b>，展現運用 AI 解決業務痛點的能力。具備跨部門溝通能力，能將業務需求轉換為技術實作。
+          具備 Data Engineering 實務經驗，專長 Azure Synapse / SQL Server 資料管道設計、ETL 自動化與 Campaign 系統資料流整合。主導開發<b>「消費人數快查系統」</b>（獲總經理獎狀肯定）與<b>「AI 名單優化系統」</b>（獲公司內部競賽第一名），展現以 LLM 解決業務痛點的實作能力。熟悉跨系統資料整合與跨部門需求轉譯，具備從 0 到 1 建置資料平台的能力。
         </div>
       </div>
 
@@ -235,11 +235,11 @@ body {
           <div class="job-co">鼎鼎聯合行銷股份有限公司<span>｜遠東集團 Happy Go・數據創新部・新北市板橋區</span></div>
           <div class="sub-label t">🔥 數據快查系統（核心專案）</div>
           <ul class="blist t">
-            <li>Python + SQL + HTML 開發內部即時查詢平台</li>
-            <li>將 T+1 報表流程優化為即時查詢</li>
-            <li>串接 ChatGPT API，自動生成用戶輪廓分析（性別、消費、行為）</li>
+            <li>獨立設計並開發內部資料查詢平台，以 Python（後端）+ SQL（Azure Synapse）+ HTML（前端）實現端對端資料服務</li>
+            <li>消除原有 T+1 資料延遲，將報表查詢改為即時回應，減少業務等待時間</li>
+            <li>運用 ChatGPT API 自動產出用戶維度分析（消費行為、性別、活躍度），取代人工彙整</li>
           </ul>
-          <div class="result t">大幅提升決策效率，獲總經理肯定</div>
+          <div class="result t">獲總經理頒發獎狀肯定（2025.02）</div>
           <div class="sub-label t">🏆 AI 名單優化系統（競賽第一名）</div>
           <ul class="blist t">
             <li>觀察到使用者在名單篩選與流程設定上的操作困難</li>
@@ -247,13 +247,12 @@ body {
             <li>大幅簡化操作流程，展現 AI 解決實際業務痛點的能力</li>
           </ul>
           <div class="result t">獲公司「平台化思維」競賽第一名</div>
-          <div class="sub-label">Campaign Data Flow</div>
+          <div class="sub-label">Campaign 系統開發與維運</div>
           <ul class="blist">
-            <li>以 Azure Synapse 作為核心資料庫，建立行銷名單處理流程（解析、清洗、欄位補齊）</li>
-            <li>串接 FTP 傳輸 EDM / SMS 名單，建立回應檔回收機制寫入資料庫</li>
+            <li>以 Azure Synapse 為核心，設計行銷名單 ETL Pipeline（來源解析 → 欄位標準化 → 寫入）</li>
+            <li>建立 FTP 自動拉取機制，整合 EDM / SMS 發送名單與回應檔（開信、點擊）回寫至資料庫</li>
             <li>Campaign 發送後的名單資料流接至 Qlik（BI 工具），供業務單位自助查詢活動成效</li>
           </ul>
-          <div class="result">建立完整「發送 → 回收 → 分析」資料流程</div>
           <div class="sub-label">保健 APP 數據專案</div>
           <ul class="blist">
             <li>從 0 建置資料模型，自行設計資料表結構與關聯邏輯</li>
@@ -261,8 +260,8 @@ body {
           </ul>
           <div class="sub-label">跨部門協作</div>
           <ul class="blist">
-            <li>主動與業務確認需求並轉換為數據邏輯，協助 Campaign 系統教學</li>
-            <li>主動整合各系統資料為自動化流程，協調業務確認需求、請 IT 協助開通防火牆，節省大量人工工時</li>
+            <li>主動與業務確認需求並轉換為數據邏輯，整理教學流程並實際帶領各單位上手</li>
+            <li>發現業務手動跨系統彙整資料的重複性工作，主導設計自動化資料整合流程；協調業務釐清需求規格、協同 IT 完成防火牆開通與系統授權，成功消除人工作業</li>
           </ul>
         </div>
 
@@ -277,18 +276,6 @@ body {
             <li>建立 ETL 自動排程與資料清理流程</li>
             <li>使用 MSBI（SSIS / SSAS / SSRS / Power BI）建立報表與資料模型</li>
             <li>與業務單位合作，執行客戶意見調查、機控表、抵用券等專案</li>
-          </ul>
-        </div>
-
-        <div class="job">
-          <div class="job-head">
-            <div class="job-title">AI 大數據工程師養成班</div>
-            <div class="job-period">2021/07 – 2021/12｜6個月</div>
-          </div>
-          <div class="job-co">緯育股份有限公司（職業培訓課程）<span>｜台北市中山區</span></div>
-          <ul class="blist">
-            <li>學習 Python、SQL、ETL、資料清洗、Docker、Linux、Git</li>
-            <li>專題：書籍推薦系統（KNN / NLP / Word2Vec + LineBot 串接）</li>
           </ul>
         </div>
 
@@ -314,7 +301,7 @@ body {
       <div class="r-sec">
         <div class="r-label">基本資料</div>
         <div class="info-row"><span class="info-key">現況</span><span style="color:#2E7D32;font-weight:600;">在職中</span></div>
-        <div class="info-row"><span class="info-key">可上班</span><span>錄取後一週</span></div>
+        <div class="info-row"><span class="info-key">可上班</span><span>錄取後一個月</span></div>
         <div class="info-row"><span class="info-key">希望地點</span><span>台北市・新北市・桃園龜山</span></div>
         <div class="info-row"><span class="info-key">希望待遇</span><span>面議</span></div>
         <div class="info-row"><span class="info-key">交通</span><span>重型機車・小型車（有照）</span></div>
@@ -392,25 +379,17 @@ body {
       <div class="tl-item">
         <div class="tl-dot t"></div>
         <div class="tl-label t">工作成果</div>
-        <div class="tl-text">先於雄獅資訊任職約一年半，負責 SQL 開發、SP 撰寫、ETL 自動排程與 Power BI 報表製作。目前在鼎鼎聯合行銷擔任資料工程師，專長 SQL、ETL 管道建置與 Campaign 系統維運，並以 Python 開發自動化腳本。曾自主開發<b>「數據快查系統」</b>，將 T+1 報表優化為即時查詢，串接 ChatGPT API 自動生成用戶輪廓分析，成果獲總經理肯定。也在觀察到使用者操作痛點後，構思並開發<b>「AI 名單優化系統」</b>，讓使用者以自然語言生成精準篩選條件，<b>獲公司「平台化思維」競賽第一名</b>。此外，發現業務單位需手動至各系統撈取資料後匯入，主動整合為自動化資料流程，過程中協調業務確認需求、請 IT 協助開通防火牆，成功節省大量人工工時。</div>
-
-        <!-- 佐證照片 -->
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;">
+        <div class="tl-text">先於雄獅資訊任職約一年半，負責 SQL 開發、SP 撰寫、ETL 自動排程與 Power BI 報表製作。目前在鼎鼎聯合行銷（遠東集團 Happy Go）擔任資料工程師，以 Azure Synapse 為核心資料庫，負責 Campaign 系統資料管道建置與維運。獨立開發<b>「消費人數快查系統」</b>，以 Python + SQL + HTML 實現端對端即時查詢服務，運用 ChatGPT API 自動產出用戶維度分析，<b>獲總經理頒發獎狀肯定（2025.02）</b>。另開發<b>「AI 名單優化系統」</b>，以自然語言驅動條件生成，<b>獲公司「平台化思維」競賽第一名</b>。此外發現業務手動跨系統彙整資料的重複性工作，主導設計自動化資料整合流程，協同業務與 IT 完成系統授權與防火牆開通，成功消除人工作業。</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;align-items:start;">
           <div>
             <img src="421373.jpg" alt="平台化思維競賽第一名"
-              style="width:100%;border-radius:8px;object-fit:cover;border:1.5px solid var(--orange-mid);box-shadow:0 2px 10px rgba(0,0,0,0.08);">
-            <div style="margin-top:5px;font-size:11px;color:var(--light);text-align:center;">
-              🏆 「平台化思維」競賽 ── 得票數第 1 優勝提案
-            </div>
+              style="width:100%;border-radius:8px;display:block;border:1.5px solid var(--orange-mid);box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="margin-top:5px;font-size:10.5px;color:var(--light);text-align:center;line-height:1.5;">🏆 平台化思維競賽・第一名</div>
           </div>
           <div>
-            <div style="width:100%;aspect-ratio:4/3;border-radius:8px;border:1.5px dashed #DDD;background:#FAFAF8;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;">
-              <div style="font-size:22px;">📷</div>
-              <div style="font-size:11px;color:#BBB;text-align:center;line-height:1.5;">待放入<br>總經理肯定佐證照片</div>
-            </div>
-            <div style="margin-top:5px;font-size:11px;color:var(--light);text-align:center;">
-              ⭐ 數據快查系統 ── 獲總經理肯定
-            </div>
+            <img src="Scanned Document 9_page-0001.jpg" alt="獎狀"
+              style="width:100%;border-radius:8px;display:block;border:1.5px solid var(--orange-mid);box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="margin-top:4px;font-size:10.5px;color:var(--light);text-align:center;line-height:1.5;">⭐ 消費人數快查系統・獎狀</div>
           </div>
         </div>
       </div>
@@ -419,6 +398,11 @@ body {
         <div class="tl-dot t"></div>
         <div class="tl-label t">溝通與團隊合作</div>
         <div class="tl-text">在日常與使用者溝通時，我習慣主動了解對方的痛點，再提出具體解決方案。曾協助業務同仁熟悉 Campaign 系統操作，整理教學流程並實際帶領各單位上手。也主動承接跨部門技術協調任務，遇到立場不同的情況，會先退一步理解對方真正的需求，透過討論找出雙方都能接受的方向——<b>立場可以不同，但目標始終是解決問題</b>。</div>
+        <div style="margin-top:14px;">
+          <img src="Scanned Document 10_page-0001.jpg" alt="獎狀"
+            style="width:100%;max-width:420px;border-radius:8px;display:block;border:1.5px solid var(--orange-mid);box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+          <div style="margin-top:4px;font-size:10.5px;color:var(--light);line-height:1.5;">⭐ HAPPY GO 新手導航站・獎狀</div>
+        </div>
       </div>
 
       <div class="tl-item">
