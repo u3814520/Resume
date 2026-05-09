@@ -157,6 +157,36 @@ body {
   * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
 }
 .footer { text-align:center; padding:16px; font-family:'DM Mono',monospace; font-size:10px; color:#CCC; letter-spacing:0.15em; }
+
+@media (max-width: 640px) {
+  .page { margin:0; border-radius:0; }
+  .header { padding:28px 20px 24px; }
+  .hgrid { grid-template-columns:auto 1fr; gap:16px; }
+  .avatar { width:66px; height:66px; font-size:22px; }
+  .header h1 { font-size:20px; }
+  .header h1 span { font-size:16px; }
+  .h-sub { font-size:9px; margin-bottom:10px; }
+  .h-pills { gap:4px; margin-bottom:10px; }
+  .pill { font-size:11px; padding:2px 8px; }
+  .h-contacts { gap:8px; }
+  .contact { font-size:11px; }
+
+  /* 主體改單欄 */
+  .body { grid-template-columns:1fr; }
+  .left { padding:24px 20px; border-right:none; border-bottom:1px solid var(--border); }
+  .right { padding:24px 20px; }
+
+  /* 右欄技能條寬度 */
+  .skill-bar { width:80px; }
+
+  /* 自傳 */
+  .cover { padding:28px 20px 36px; }
+
+  /* 競賽照片並排改單欄 */
+  div[style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+}
 </style>
 </head>
 <body>
