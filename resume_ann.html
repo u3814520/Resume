@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>曾巧庭 履歷</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --orange: #F59332;
+  --orange-light: #FFF0D6;
+  --orange-mid: #FDDCA0;
+  --teal: #0C9B8A;
+  --teal-light: #E6F7F5;
+  --dark: #222222;
+  --mid: #555555;
+  --light: #888888;
+  --bg: #FFFFFF;
+  --bg-soft: #FAFAF8;
+  --border: #EBEBEB;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:'Noto Sans TC',sans-serif;
+  background:#F0EDE8;
+  color:var(--dark);
+  font-size:14px;
+  line-height:1.75;
+}
+.page {
+  max-width:860px;
+  margin:32px auto;
+  background:var(--bg);
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 4px 32px rgba(0,0,0,0.09);
+}
+
+/* HEADER */
+.header {
+  background: #F59332;
+  padding:40px 48px 36px;
+  position:relative; overflow:hidden;
+}
+.header::after {
+  content:''; position:absolute;
+  right:-40px; bottom:-60px;
+  width:220px; height:220px;
+  background:rgba(255,255,255,0.08);
+  border-radius:50%;
+}
+.hgrid { display:grid; grid-template-columns:auto 1fr; gap:28px; align-items:center; position:relative; z-index:1; }
+.avatar {
+  width:86px; height:86px; border-radius:50%;
+  background:rgba(255,255,255,0.2);
+  border:3px solid rgba(255,255,255,0.55);
+  display:flex; align-items:center; justify-content:center;
+  font-size:28px; font-weight:900; color:#fff; flex-shrink:0;
+}
+.header h1 { font-size:27px; font-weight:900; color:#fff; letter-spacing:0.04em; line-height:1.15; margin-bottom:4px; }
+.header h1 span { opacity:.65; font-size:20px; font-weight:400; }
+.h-sub { font-family:'DM Mono',monospace; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.75); margin-bottom:14px; }
+.h-pills { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px; }
+.pill { background:rgba(255,255,255,0.2); border:1px solid rgba(255,255,255,0.35); color:#fff; padding:3px 11px; border-radius:20px; font-size:12px; }
+.h-contacts { display:flex; flex-wrap:wrap; gap:16px; }
+.contact { display:flex; align-items:center; gap:5px; color:rgba(255,255,255,0.85); font-size:12px; }
+
+/* BODY */
+.body { display:grid; grid-template-columns:1fr 252px; }
+.left  { padding:36px 40px; border-right:1px solid var(--border); }
+.right { padding:32px 26px; background:var(--bg-soft); }
+
+/* SECTION TITLE */
+.sec-title {
+  font-family:'DM Mono',monospace; font-size:10px; font-weight:500;
+  letter-spacing:0.22em; text-transform:uppercase; color:var(--orange);
+  margin-bottom:16px; display:flex; align-items:center; gap:10px;
+}
+.sec-title::after { content:''; flex:1; height:1px; background:var(--orange-mid); }
+.section { margin-bottom:30px; }
+
+/* SUMMARY */
+.summary {
+  background:var(--orange-light); border-left:3px solid var(--orange);
+  padding:15px 18px; border-radius:0 8px 8px 0;
+  font-size:13.5px; color:var(--mid); line-height:1.85;
+}
+.summary b { color:var(--dark); }
+
+/* JOB */
+.job { margin-bottom:22px; padding-bottom:22px; border-bottom:1px solid var(--border); }
+.job:last-child { border-bottom:none; margin-bottom:0; padding-bottom:0; }
+.job-head { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:2px; gap:8px; }
+.job-title { font-size:15px; font-weight:700; }
+.job-period { font-family:'DM Mono',monospace; font-size:11px; color:var(--light); background:#F2F2F2; padding:2px 8px; border-radius:4px; white-space:nowrap; flex-shrink:0; }
+.job-co { font-size:12px; color:var(--teal); font-weight:500; margin-bottom:10px; }
+.job-co span { color:var(--light); font-weight:400; }
+.sub-label { font-size:11.5px; font-weight:700; color:var(--dark); margin:10px 0 5px; display:flex; align-items:center; gap:6px; }
+.sub-label::before { content:''; width:3px; height:13px; background:var(--orange); border-radius:2px; display:inline-block; }
+.sub-label.t::before { background:var(--teal); }
+.blist { list-style:none; }
+.blist li { font-size:13px; color:var(--mid); padding:1.5px 0 1.5px 14px; position:relative; }
+.blist li::before { content:'–'; position:absolute; left:0; color:var(--orange); font-weight:700; }
+.blist.t li::before { color:var(--teal); }
+.result { margin-top:7px; font-size:12.5px; color:var(--dark); font-weight:500; padding-left:14px; position:relative; }
+.result::before { content:'→'; position:absolute; left:0; color:var(--orange); }
+.result.t::before { color:var(--teal); }
+.wip-job { border:1.5px dashed #DDD; border-radius:10px; padding:14px 16px; margin-top:4px; }
+.wip-badge { display:inline-flex; align-items:center; gap:5px; background:var(--orange-light); border:1px solid var(--orange-mid); color:var(--orange); padding:2px 10px; border-radius:20px; font-size:11px; font-weight:700; margin-left:8px; }
+.wip-dot { width:6px; height:6px; background:var(--orange); border-radius:50%; animation:blink 1.4s ease-in-out infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+/* RIGHT COL */
+.r-label { font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.2em; text-transform:uppercase; color:var(--orange); margin-bottom:11px; display:flex; align-items:center; gap:8px; }
+.r-label::after { content:''; flex:1; height:1px; background:var(--orange-mid); }
+.r-sec { margin-bottom:26px; }
+.info-row { display:flex; gap:8px; font-size:12.5px; margin-bottom:7px; align-items:flex-start; }
+.info-key { color:var(--light); min-width:50px; font-size:11.5px; flex-shrink:0; }
+.edu-school { font-weight:700; font-size:13.5px; }
+.edu-dept { font-size:12px; color:var(--teal); margin:1px 0; }
+.edu-note { font-size:11.5px; color:var(--mid); line-height:1.6; margin-top:3px; }
+.skill-row { display:flex; align-items:center; justify-content:space-between; margin-bottom:9px; }
+.skill-name { font-size:12.5px; }
+.skill-bar { width:96px; height:4px; background:#EBEBEB; border-radius:3px; overflow:hidden; }
+.skill-fill { height:100%; background:linear-gradient(90deg,var(--orange),#FFBE3A); border-radius:3px; }
+.skill-fill.t { background:linear-gradient(90deg,var(--teal),#38D5BF); }
+.tag-wrap { display:flex; flex-wrap:wrap; gap:5px; }
+.tag { background:var(--orange-light); border:1px solid var(--orange-mid); color:#7A5200; padding:3px 9px; border-radius:20px; font-size:11px; font-weight:500; }
+.tag.t { background:var(--teal-light); border-color:#B2E8E2; color:#0A6E60; }
+.lang-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; font-size:12.5px; }
+.lang-lv { color:var(--teal); font-weight:500; font-size:12px; }
+
+/* COVER LETTER */
+.cover { padding:40px 48px 48px; border-top:1px solid var(--border); }
+.cover-hd { display:flex; align-items:center; gap:14px; margin-bottom:32px; }
+.cover-bar { width:4px; height:40px; background:linear-gradient(180deg,var(--orange),var(--teal)); border-radius:4px; flex-shrink:0; }
+.cover-mono { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--teal); margin-bottom:3px; }
+.cover-title { font-size:20px; font-weight:900; color:var(--dark); }
+
+/* TIMELINE */
+.timeline { position:relative; padding-left:28px; }
+.timeline::before {
+  content:''; position:absolute; left:5px; top:8px; width:2px; bottom:8px;
+  background:linear-gradient(180deg,var(--orange) 0%,var(--orange-mid) 70%,transparent 100%);
+  border-radius:2px;
+}
+.tl-item { position:relative; margin-bottom:26px; }
+.tl-item:last-child { margin-bottom:0; }
+.tl-dot { position:absolute; left:-24px; top:5px; width:11px; height:11px; border-radius:50%; background:var(--orange); border:2.5px solid #fff; box-shadow:0 0 0 2px var(--orange-mid); }
+.tl-dot.t { background:var(--teal); box-shadow:0 0 0 2px var(--teal-light); }
+.tl-label { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:var(--orange); margin-bottom:6px; }
+.tl-label.t { color:var(--teal); }
+.tl-text { font-size:13.5px; color:var(--mid); line-height:1.85; }
+.tl-text b { color:var(--dark); }
+
+@media print {
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+}
+.footer { text-align:center; padding:16px; font-family:'DM Mono',monospace; font-size:10px; color:#CCC; letter-spacing:0.15em; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="hgrid">
+      <img src="B20211207.jpg" alt="曾巧庭" style="width:86px;height:86px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.55);flex-shrink:0;" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=&quot;avatar&quot;>曾</div>')">
+      <div>
+        <h1>曾巧庭 <span>Ann</span></h1>
+        <div class="h-sub">Data Engineer · AI Application</div>
+        <div class="h-pills">
+          <span class="pill">活潑外向</span>
+          <span class="pill">工作認真負責</span>
+          <span class="pill">自學能力強</span>
+        </div>
+        <div class="h-contacts">
+          <span class="contact">📧 待填</span>
+          <span class="contact">📱 待填</span>
+          <span class="contact">📍 待填</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+    <div class="left">
+
+      <div class="section">
+        <div class="sec-title">專業摘要</div>
+        <div class="summary">
+          具備<b>資料工程與行銷數據應用</b>經驗，專長 SQL、ETL 與資料流程設計，熟悉 Campaign 系統與用戶行為分析。曾主導開發<b>「數據快查系統」</b>與<b>「AI 名單優化系統」</b>，後者獲公司「平台化思維」<b>競賽第一名</b>，展現運用 AI 解決業務痛點的能力。具備跨部門溝通能力，能將業務需求轉換為技術實作。
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="sec-title">工作經驗</div>
+
+        <div class="job">
+          <div class="job-head">
+            <div class="job-title">數據工程師</div>
+            <div class="job-period">2023/08 – 至今</div>
+          </div>
+          <div class="job-co">鼎鼎聯合行銷股份有限公司<span>｜數據創新部</span></div>
+          <div class="sub-label t">🔥 數據快查系統（核心專案）</div>
+          <ul class="blist t">
+            <li>Python + SQL + HTML 開發內部即時查詢平台</li>
+            <li>將 T+1 報表流程優化為即時查詢</li>
+            <li>串接 ChatGPT API，自動生成用戶輪廓分析（性別、消費、行為）</li>
+          </ul>
+          <div class="result t">大幅提升決策效率，獲總經理肯定</div>
+          <div class="sub-label t">🏆 AI 名單優化系統（競賽第一名）</div>
+          <ul class="blist t">
+            <li>觀察到使用者在名單篩選與流程設定上的操作困難</li>
+            <li>構思並開發 AI 名單優化系統，讓使用者以自然語言快速生成精準條件</li>
+            <li>大幅簡化操作流程，展現 AI 解決實際業務痛點的能力</li>
+          </ul>
+          <div class="result t">獲公司「平台化思維」競賽第一名</div>
+          <div class="sub-label">Campaign Data Flow</div>
+          <ul class="blist">
+            <li>建立行銷名單處理流程（解析、清洗、欄位補齊）</li>
+            <li>串接 FTP 傳輸 EDM / SMS 名單，建立回應檔回收機制寫入資料庫</li>
+            <li>支援 Qlik 進行活動成效分析</li>
+          </ul>
+          <div class="result">建立完整「發送 → 回收 → 分析」資料流程</div>
+          <div class="sub-label">保健 APP 數據專案</div>
+          <ul class="blist">
+            <li>從 0 建置資料模型，自行設計資料表結構與關聯邏輯</li>
+            <li>根據標籤進行衛教內容個人化推薦</li>
+          </ul>
+          <div class="sub-label">跨部門協作</div>
+          <ul class="blist">
+            <li>主動與業務確認需求並轉換為數據邏輯，協助 Campaign 系統教學</li>
+            <li>主導自動化專案，協調 IT 防火牆設定，節省大量人工工時</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <div class="job-title">軟體分析師</div>
+            <div class="job-period">2022/01 – 2023/03｜1年3個月</div>
+          </div>
+          <div class="job-co">雄獅資訊科技股份有限公司<span>｜台北市內湖區</span></div>
+          <ul class="blist">
+            <li>SQL 查詢開發與 Stored Procedure（SP）撰寫，維護資料倉儲效能</li>
+            <li>建立 ETL 自動排程與資料清理流程</li>
+            <li>使用 MSBI（SSIS / SSAS / SSRS / Power BI）建立報表與資料模型</li>
+            <li>與業務單位合作，執行客戶意見調查、機控表、抵用券等專案</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <div class="job-title">AI 大數據工程師養成班</div>
+            <div class="job-period">2021/07 – 2021/12｜6個月</div>
+          </div>
+          <div class="job-co">緯育股份有限公司（資策會）<span>｜台北市中山區</span></div>
+          <ul class="blist">
+            <li>學習 Python、SQL、ETL、資料清洗、Docker、Linux、Git</li>
+            <li>專題：書籍推薦系統（KNN / NLP / Word2Vec + LineBot 串接）</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <div class="job-title">影片剪接師</div>
+            <div class="job-period">2014/06 – 2021/06｜7年</div>
+          </div>
+          <div class="job-co">衛星娛樂 / 友松娛樂<span>｜台北市</span></div>
+          <ul class="blist">
+            <li>綜藝節目剪輯與後製（EDIUS / After Effects / Photoshop）</li>
+            <li>參與節目：挑戰吧!大神、似曾相識、全民星攻略等</li>
+          </ul>
+          <div class="result">培養邏輯思維與細節處理能力</div>
+        </div>
+
+        <div class="wip-job">
+          <div style="display:flex;align-items:center;">
+            <span style="font-weight:700;font-size:14px;color:#555;">AI Agent 專案</span>
+            <span class="wip-badge"><div class="wip-dot"></div>自主開發中</span>
+          </div>
+          <div style="font-size:12.5px;color:#AAA;margin-top:5px;">個人作品集項目，完成後更新至此…</div>
+        </div>
+      </div>
+
+    </div><!-- end left -->
+
+    <div class="right">
+
+      <div class="r-sec">
+        <div class="r-label">基本資料</div>
+        <div class="info-row"><span class="info-key">現況</span><span style="color:#2E7D32;font-weight:600;">在職中</span></div>
+        <div class="info-row"><span class="info-key">可上班</span><span>錄取後一週</span></div>
+        <div class="info-row"><span class="info-key">希望地點</span><span>台北市・新北市・桃園龜山</span></div>
+        <div class="info-row"><span class="info-key">希望待遇</span><span>面議</span></div>
+        <div class="info-row"><span class="info-key">交通</span><span>重型機車・小型車（有照）</span></div>
+      </div>
+
+      <div class="r-sec">
+        <div class="r-label">學歷</div>
+        <div class="edu-school">國立中興大學</div>
+        <div class="edu-dept">應用數學系｜碩士</div>
+        <div class="edu-note">論文：氣候變遷對台灣茶葉、酒類與咖啡產業進出口影響分析<br>方法：OLS / PCA / Ridge / Lasso</div>
+      </div>
+
+      <div class="r-sec">
+        <div class="r-label">核心技術</div>
+        <div class="skill-row"><span class="skill-name">SQL</span><div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div></div>
+        <div class="skill-row"><span class="skill-name">ETL Pipeline</span><div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div></div>
+        <div class="skill-row"><span class="skill-name">Python</span><div class="skill-bar"><div class="skill-fill" style="width:78%"></div></div></div>
+        <div class="skill-row"><span class="skill-name">Power BI / Qlik</span><div class="skill-bar"><div class="skill-fill" style="width:72%"></div></div></div>
+        <div class="skill-row"><span class="skill-name">Azure Synapse</span><div class="skill-bar"><div class="skill-fill t" style="width:80%"></div></div></div>
+        <div class="skill-row"><span class="skill-name">AWS Redshift/S3</span><div class="skill-bar"><div class="skill-fill t" style="width:72%"></div></div></div>
+        <div class="skill-row"><span class="skill-name">Docker / Linux</span><div class="skill-bar"><div class="skill-fill t" style="width:62%"></div></div></div>
+      </div>
+
+      <div class="r-sec">
+        <div class="r-label">技術標籤</div>
+        <div class="tag-wrap">
+          <span class="tag">SQL Server</span><span class="tag">ETL</span>
+          <span class="tag">SSIS/SSAS</span><span class="tag">Python</span>
+          <span class="tag">Power BI</span><span class="tag">Qlik</span>
+          <span class="tag t">Azure Synapse</span><span class="tag t">AWS Redshift</span>
+          <span class="tag t">S3/Glue</span><span class="tag t">ChatGPT API</span>
+          <span class="tag">Docker</span><span class="tag">Git</span>
+          <span class="tag">NLP</span><span class="tag">OpenCV</span>
+        </div>
+      </div>
+
+      <div class="r-sec">
+        <div class="r-label">語言能力</div>
+        <div class="lang-row"><span>中文</span><span class="lang-lv">精通</span></div>
+        <div class="lang-row"><span>台語</span><span class="lang-lv">中等</span></div>
+        <div class="lang-row"><span>英文</span><span class="lang-lv">TOEIC 415（進修中）</span></div>
+        <div style="font-size:11.5px;color:var(--light);margin-top:8px;padding-top:8px;border-top:1px solid var(--border);">
+          🍁 加拿大遊學 16 週（2023/04–07）
+        </div>
+      </div>
+
+    </div><!-- end right -->
+  </div><!-- end body -->
+
+  <!-- COVER LETTER -->
+  <div class="cover">
+    <div class="cover-hd">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <div class="cover-bar"></div>
+        <div>
+          <div class="cover-mono">Cover Letter</div>
+          <div class="cover-title">自　傳</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-label">關於我</div>
+        <div class="tl-text">您好，我是曾巧庭，個性活潑外向，做事認真負責。大學就讀資訊傳播系，畢業後投入影音後製工作約七年。某次偶然看到網路平台能針對每位用戶精準推薦內容，讓我對大數據與演算法產生強烈好奇——這份好奇心，成為我轉職 coding 世界的起點。</div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-label">學習與轉職</div>
+        <div class="tl-text">2021 年參加緯育 AI 大數據養成班，系統學習 Python、SQL、ETL、Docker 與機器學習，完成書籍推薦系統專題（KNN / NLP / Word2Vec）。遇到困難時習慣先上網自行研究，享受解決問題的成就感。之後更以<b>在職進修方式完成國立中興大學應用數學系碩士學位</b>，展現自律與持續學習的精神。</div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot t"></div>
+        <div class="tl-label t">工作成果</div>
+        <div class="tl-text">先於雄獅資訊任職約一年半，負責 SQL 開發、SP 撰寫與 Power BI 報表製作，奠定資料分析的實務基礎。目前在鼎鼎聯合行銷擔任資料工程師，專長 SQL、ETL 管道建置與 Campaign 行銷系統維運，並以 Python 開發自動化腳本。曾自主開發<b>「數據快查系統」</b>，將 T+1 報表優化為即時查詢，串接 ChatGPT API 自動生成用戶輪廓分析，成果獲總經理肯定。也在觀察到使用者操作痛點後，構思並開發<b>「AI 名單優化系統」</b>，讓使用者以自然語言生成精準篩選條件，<b>獲公司「平台化思維」競賽第一名</b>。此外主導自動化專案，協調 IT 確認防火牆設定，成功將業務部門重複性作業自動化，節省大量人工工時。</div>
+
+        <!-- 佐證照片 -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;">
+          <div>
+            <img src="421373.jpg" alt="平台化思維競賽第一名"
+              style="width:100%;border-radius:8px;object-fit:cover;border:1.5px solid var(--orange-mid);box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="margin-top:5px;font-size:11px;color:var(--light);text-align:center;">
+              🏆 「平台化思維」競賽 ── 得票數第 1 優勝提案
+            </div>
+          </div>
+          <div>
+            <div style="width:100%;aspect-ratio:4/3;border-radius:8px;border:1.5px dashed #DDD;background:#FAFAF8;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;">
+              <div style="font-size:22px;">📷</div>
+              <div style="font-size:11px;color:#BBB;text-align:center;line-height:1.5;">待放入<br>總經理肯定佐證照片</div>
+            </div>
+            <div style="margin-top:5px;font-size:11px;color:var(--light);text-align:center;">
+              ⭐ 數據快查系統 ── 獲總經理肯定
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot t"></div>
+        <div class="tl-label t">溝通與團隊合作</div>
+        <div class="tl-text">在日常與使用者溝通時，我習慣主動了解對方的痛點，再提出具體解決方案。曾協助業務同仁熟悉 Campaign 系統操作，整理教學流程並實際帶領團隊上手，也主動承接跨部門技術協調任務。遇到立場不同的情況，會先退一步理解對方真正的需求，透過討論找出雙方都能接受的方向——<b>立場可以不同，但目標始終是解決問題</b>。</div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-label">未來展望</div>
+        <div class="tl-text">離開雄獅後，我赴加拿大遊學 16 週，拓展英語能力與國際視野，旅居期間仍持續線上學習，不曾中斷對資料工程的熱情。目前正積極深入 AI Agent 與 LLM 應用工程，期望以紮實的資料工程底層能力為基礎，延伸至更智慧化的資料應用場景。期待能加入貴公司，以認真負責的態度與跨領域實作經歷，持續為團隊創造有價值的數據成果。再次感謝貴公司撥冗閱讀，期待有機會進一步交流。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">曾巧庭 · DATA ENGINEER · 2026</div>
+
+</div>
+</body>
+</html>
