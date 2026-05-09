@@ -16,13 +16,13 @@
   --mid: #555555;
   --light: #888888;
   --bg: #FFFFFF;
-  --bg-soft: #FAFAF8;
+  --bg-soft: #FFFFFF;
   --border: #EBEBEB;
 }
 * { margin:0; padding:0; box-sizing:border-box; }
 body {
   font-family:'Noto Sans TC',sans-serif;
-  background:#F0EDE8;
+  background:#FFFFFF;
   color:var(--dark);
   font-size:14px;
   line-height:1.75;
@@ -33,7 +33,7 @@ body {
   background:var(--bg);
   border-radius:16px;
   overflow:hidden;
-  box-shadow:0 4px 32px rgba(0,0,0,0.09);
+  
 }
 
 /* HEADER */
@@ -146,8 +146,8 @@ body {
 }
 .tl-item { position:relative; margin-bottom:26px; }
 .tl-item:last-child { margin-bottom:0; }
-.tl-dot { position:absolute; left:-24px; top:5px; width:11px; height:11px; border-radius:50%; background:var(--orange); border:2.5px solid #fff; box-shadow:0 0 0 2px var(--orange-mid); }
-.tl-dot.t { background:var(--teal); box-shadow:0 0 0 2px var(--teal-light); }
+.tl-dot { position:absolute; left:-24px; top:5px; width:11px; height:11px; border-radius:50%; background:var(--orange); border:2.5px solid #fff;  }
+.tl-dot.t { background:var(--teal);  }
 .tl-label { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:var(--orange); margin-bottom:6px; }
 .tl-label.t { color:var(--teal); }
 .tl-text { font-size:13.5px; color:var(--mid); line-height:1.85; }
@@ -155,6 +155,14 @@ body {
 
 @media print {
   * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  .cover {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .cover .timeline {
+    flex: 1;
+  }
 }
 .footer { text-align:center; padding:16px; font-family:'DM Mono',monospace; font-size:10px; color:#CCC; letter-spacing:0.15em; }
 
@@ -200,9 +208,11 @@ body {
         <h1>曾巧庭 <span>Ann</span></h1>
         <div class="h-sub">Data Engineer · AI Application</div>
         <div class="h-pills">
-          <span class="pill">活潑外向</span>
-          <span class="pill">工作認真負責</span>
-          <span class="pill">自學能力強</span>
+          <span class="pill">主導專案</span>
+          <span class="pill">AI / LLM</span>
+          <span class="pill">ETL</span>
+          <span class="pill">Campaign</span>
+          <span class="pill">Cloud</span>
         </div>
         <div class="h-contacts">
           <span class="contact">📧 待填</span>
@@ -233,7 +243,7 @@ body {
             <div class="job-period">2023/08 – 至今</div>
           </div>
           <div class="job-co">鼎鼎聯合行銷股份有限公司<span>｜遠東集團 Happy Go・數據創新部・新北市板橋區</span></div>
-          <div class="sub-label t">🔥 數據快查系統（核心專案）</div>
+          <div class="sub-label t">🔥 消費人數快查系統（核心專案）</div>
           <ul class="blist t">
             <li>獨立設計並開發內部資料查詢平台，以 Python（後端）+ SQL（Azure Synapse）+ HTML（前端）實現端對端資料服務</li>
             <li>消除原有 T+1 資料延遲，將報表查詢改為即時回應，減少業務等待時間</li>
@@ -243,7 +253,7 @@ body {
           <div class="sub-label t">🏆 AI 名單優化系統（競賽第一名）</div>
           <ul class="blist t">
             <li>觀察到使用者在名單篩選與流程設定上的操作困難</li>
-            <li>構思並開發 AI 名單優化系統，讓使用者以自然語言快速生成精準條件</li>
+            <li>以 LLM（ChatGPT API）驅動自然語言條件生成，協助使用者快速建立 Campaign 名單邏輯，降低操作門檻並提升名單設定效率</li>
             <li>大幅簡化操作流程，展現 AI 解決實際業務痛點的能力</li>
           </ul>
           <div class="result t">獲公司「平台化思維」競賽第一名</div>
@@ -302,9 +312,9 @@ body {
         <div class="r-label">基本資料</div>
         <div class="info-row"><span class="info-key">現況</span><span style="color:#2E7D32;font-weight:600;">在職中</span></div>
         <div class="info-row"><span class="info-key">可上班</span><span>錄取後一個月</span></div>
-        <div class="info-row"><span class="info-key">希望地點</span><span>台北市・新北市・桃園龜山</span></div>
+        <div class="info-row"><span class="info-key">希望地點</span><span>台北市・新北市・<br>桃園龜山</span></div>
         <div class="info-row"><span class="info-key">希望待遇</span><span>面議</span></div>
-        <div class="info-row"><span class="info-key">交通</span><span>重型機車・小型車（有照）</span></div>
+        <div class="info-row"><span class="info-key">交通</span><span>重型機車</span></div>
       </div>
 
       <div class="r-sec">
@@ -315,7 +325,7 @@ body {
         <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--border);">
           <div style="font-size:12px;font-weight:700;color:var(--dark);">緯育 AI 大數據養成班</div>
           <div style="font-size:11.5px;color:var(--teal);margin:1px 0;">職業培訓課程｜2021/07–12</div>
-          <div style="font-size:11.5px;color:var(--mid);margin-top:2px;">Python・SQL・ETL・Docker・機器學習</div>
+          <div style="font-size:11.5px;color:var(--mid);margin-top:2px;">Python・SQL・ETL・Docker<br>機器學習・深度學習</div>
           <div style="font-size:11.5px;color:var(--mid);margin-top:4px;">專題：書籍推薦系統（KNN / NLP / Word2Vec + LineBot 串接）</div>
         </div>
       </div>
@@ -358,7 +368,7 @@ body {
   </div><!-- end body -->
 
   <!-- COVER LETTER -->
-  <div class="cover">
+  <div class="cover" style="page-break-before:always;">
     <div class="cover-hd">
       <div style="display:flex;align-items:center;gap:14px;">
         <div class="cover-bar"></div>
@@ -369,27 +379,26 @@ body {
       </div>
     </div>
 
-    <div class="timeline">
-      <div class="tl-item">
+    <div class="timeline">      <div class="tl-item">
         <div class="tl-dot"></div>
-        <div class="tl-label">關於我與轉職歷程</div>
-        <div class="tl-text">您好，我是曾巧庭，個性活潑外向，做事認真負責。大學就讀資訊傳播系，畢業後投入影音後製工作約七年。某次偶然看到網路平台能針對每位用戶精準推薦內容，讓我對大數據與演算法產生強烈好奇——這份好奇心成為轉職的起點。2021 年參加緯育 AI 大數據養成班，系統學習 Python、SQL、ETL、Docker 與機器學習，並完成書籍推薦系統專題。遇到困難時習慣先自行研究，享受解決問題的成就感，之後更以<b>在職進修方式完成國立中興大學應用數學系碩士學位</b>。</div>
+        <div class="tl-label">關於我</div>
+        <div class="tl-text">我是跨領域轉職背景，從影音後製領域轉向資料工程與數據應用，持續深化技術能力。2021 年接受 AI 大數據專業訓練，系統學習 Python、SQL、ETL、Docker 與機器學習，後續以在職進修方式完成<b>國立中興大學應用數學碩士</b>，培養資料分析、模型建構與獨立解決問題能力。</div>
       </div>
 
       <div class="tl-item">
         <div class="tl-dot t"></div>
         <div class="tl-label t">工作成果</div>
-        <div class="tl-text">先於雄獅資訊任職約一年半，負責 SQL 開發、SP 撰寫、ETL 自動排程與 Power BI 報表製作。目前在鼎鼎聯合行銷（遠東集團 Happy Go）擔任資料工程師，以 Azure Synapse 為核心資料庫，負責 Campaign 系統資料管道建置與維運。獨立開發<b>「消費人數快查系統」</b>，以 Python + SQL + HTML 實現端對端即時查詢服務，運用 ChatGPT API 自動產出用戶維度分析，<b>獲總經理頒發獎狀肯定（2025.02）</b>。另開發<b>「AI 名單優化系統」</b>，以自然語言驅動條件生成，<b>獲公司「平台化思維」競賽第一名</b>。此外發現業務手動跨系統彙整資料的重複性工作，主導設計自動化資料整合流程，協同業務與 IT 完成系統授權與防火牆開通，成功消除人工作業。</div>
+        <div class="tl-text">先於雄獅資訊任職約一年半，負責 SQL 開發、SP 撰寫、ETL 自動排程與 Power BI 報表製作。目前在鼎鼎聯合行銷（遠東集團 Happy Go）擔任資料工程師，以 Azure Synapse 為核心資料庫，負責 Campaign 系統資料管道建置與維運。獨立開發<b>「消費人數快查系統」</b>，以 Python + SQL + HTML 實現端對端即時查詢服務，運用 ChatGPT API 自動產出用戶維度分析，<b>獲總經理頒發獎狀肯定</b>。另開發<b>「AI 名單優化系統」</b>，以自然語言驅動條件生成，<b>獲公司「平台化思維」競賽第一名</b>。此外發現業務手動跨系統彙整資料的重複性工作，主導設計自動化資料整合流程，協同業務與 IT 完成系統授權與防火牆開通，成功消除人工作業。</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;align-items:start;">
           <div>
             <img src="421373.jpg" alt="平台化思維競賽第一名"
-              style="width:100%;border-radius:8px;display:block;border:1.5px solid var(--orange-mid);box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-            <div style="margin-top:5px;font-size:10.5px;color:var(--light);text-align:center;line-height:1.5;">🏆 平台化思維競賽・第一名</div>
+              style="width:75%;border-radius:8px;display:block;border:1.5px solid var(--orange-mid);">
+            <div style="margin-top:5px;font-size:10.5px;color:var(--light);text-align:center;line-height:1.5;width:75%;">🏆 平台化思維競賽・第一名</div>
           </div>
           <div>
             <img src="Scanned Document 9_page-0001.jpg" alt="獎狀"
-              style="width:100%;border-radius:8px;display:block;border:1.5px solid var(--orange-mid);box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-            <div style="margin-top:4px;font-size:10.5px;color:var(--light);text-align:center;line-height:1.5;">⭐ 消費人數快查系統・獎狀</div>
+              style="width:100%;max-width:320px;border-radius:8px;display:block;border:1.5px solid var(--orange-mid);">
+            <div style="margin-top:4px;font-size:10.5px;color:var(--light);line-height:1.5;">⭐ 消費人數快查系統・獎狀</div>
           </div>
         </div>
       </div>
@@ -398,9 +407,9 @@ body {
         <div class="tl-dot t"></div>
         <div class="tl-label t">溝通與團隊合作</div>
         <div class="tl-text">在日常與使用者溝通時，我習慣主動了解對方的痛點，再提出具體解決方案。曾協助業務同仁熟悉 Campaign 系統操作，整理教學流程並實際帶領各單位上手。也主動承接跨部門技術協調任務，遇到立場不同的情況，會先退一步理解對方真正的需求，透過討論找出雙方都能接受的方向——<b>立場可以不同，但目標始終是解決問題</b>。</div>
-        <div style="margin-top:14px;">
+        <div style="margin-top:14px;max-width:320px;">
           <img src="Scanned Document 10_page-0001.jpg" alt="獎狀"
-            style="width:100%;max-width:420px;border-radius:8px;display:block;border:1.5px solid var(--orange-mid);box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            style="width:100%;border-radius:8px;display:block;border:1.5px solid var(--orange-mid);">
           <div style="margin-top:4px;font-size:10.5px;color:var(--light);line-height:1.5;">⭐ HAPPY GO 新手導航站・獎狀</div>
         </div>
       </div>
@@ -408,7 +417,7 @@ body {
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-label">未來展望</div>
-        <div class="tl-text">離開雄獅後，我赴加拿大遊學 16 週，拓展英語能力與國際視野，旅居期間仍持續線上學習，不曾中斷對資料工程的熱情。目前正積極深入 AI Agent 與 LLM 應用工程，期望以紮實的資料工程底層能力為基礎，延伸至更智慧化的資料應用場景。期待能加入貴公司，以認真負責的態度與跨領域實作經歷，持續為團隊創造有價值的數據成果。再次感謝貴公司撥冗閱讀，期待有機會進一步交流。</div>
+        <div class="tl-text">目前正積極深入 AI Agent 與 LLM 應用工程，期望以紮實的資料工程底層能力為基礎，延伸至更智慧化的資料應用場景。期待能加入貴公司，以認真負責的態度與跨領域實作經歷，持續為團隊創造有價值的數據成果。再次感謝貴公司撥冗閱讀，期待有機會進一步交流。</div>
       </div>
     </div>
   </div>
